@@ -1,0 +1,28 @@
+{
+  "name": "social-flashcards",
+  "version": "1.0.0",
+  "description": "Flash cards with the ability to rewiew any language",
+  "main": "index.js",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "express-messages": "^1.0.1",
+    "express-session": "^1.17.0",
+    "express-validator": "^6.3.0",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.8.10",
+    "nodemon": "^1.19.4",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "author": "Isiah Martin",
+  "license": "ISC"
+}

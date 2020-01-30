@@ -1,0 +1,114 @@
+<% if(error_msg != ''){%>
+    <div>
+        <%= error_msg %>
+    </div>
+<%}%>
+
+<% if(success_msg != ''){%>
+    <div>
+        <%= success_msg %>
+    </div>
+<%}%>
+
+
+<% if(error_tries != ''){%>
+    <div>
+        <%= error_tries %>
+    </div>
+<%}%>
+
+
+<% if(typeof error != 'undefined' && error != 'noError'){%>
+    <div>
+        <%= error %>
+    </div>
+<%}%>
+
+<% if(typeof alldata != 'undefined'){%>
+    <% alldata.forEach(function(info){%>
+        <div class="cardstyle">
+            <div class="qcolor">
+                Question: <%= info.question %>
+            </div>
+            <div class="acolor">
+                Answer: <%= info.answer %>
+            </div>
+            <br>
+        </div>
+        
+    <%});%>
+<%}%>
+
+<% if(typeof choiceedit != 'undefined'){%>
+    <% choiceedit.forEach(function(info){%>
+        <div class="cardholder" class="cardstyleedit">
+            <a href="<%=`http://localhost:5000/gui/edit/${info.id}` %>" class="cardeditredirect">
+                <button class="selection">
+                    <div>                
+                        Card ID: <%= info.id %>                
+                    </div>
+                    <div class="qcolor">
+                        Question: <%= info.question %>
+                    </div>
+                    <div class="acolor">                
+                        Answer: <%= info.answer %>                
+                    </div>
+                </button>
+            </a>
+            
+        </div>
+        <br>
+        
+    <%});%>
+<%}%>
+
+
+<% if(typeof allinfo != 'undefined'){%>
+    <% allinfo.forEach(function(info){%>
+        <div class="cardholder" class="cardstyleedit">
+            <a href="<%=`http://localhost:5000/gui/delete/${info.id}` %>" class="cardeditredirect">
+                <button class="selection">
+                    <div>                
+                        Card ID: <%= info.id %>                
+                    </div>
+                    <div class="qcolor">
+                        Question: <%= info.question %>
+                    </div>
+                    <div class="acolor">                
+                        Answer: <%= info.answer %>                
+                    </div>
+                </button>
+            </a>
+            
+        </div>
+        <br>
+        
+    <%});%>
+<%}%>
+
+<% if(typeof decks != 'undefined'){%>
+    <% decks.forEach(function(deck){%>
+        <div>
+            <button>
+                <%= deck.deck %>
+            </button>
+            <br>
+        </div>
+        
+    <%});%>
+<%}%>
+
+<% if(typeof deckname != 'undefined'){%>
+    <% deckname.forEach(function(deck){%>
+        <div>
+            <a href="<%= `http://localhost:5000/card/${deck}/false/0/0/noError` %>">
+                <button>
+                    <%= deck %>
+                </button>
+            </a>
+            
+            <br>
+        </div>
+        
+    <%});%>
+<%}%>

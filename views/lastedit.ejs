@@ -1,0 +1,27 @@
+<a href="http://localhost:5000/card"><h1>Home</h1></a>
+<form method="POST" action="<%=`http://localhost:5000/gui/edit/${cardinfo}?_method=PUT` %>" id="form-size">      
+    <div class="form-group">      
+      <h3 class="qcolor">Question:</h3>      
+      <textarea id="textbox" type="name" name="question" placeholder="<%= typeof editQ != 'undefined' ? editQ  : '' %>" value="<%= typeof editQ != 'undefined' ? editQ  : '' %>"></textarea>      
+    </div>
+    <br>      
+    <div class="form-group">      
+      <h3 class="acolor">Answer:</h3>      
+      <textarea id="boxsize" type="text" name="answer" placeholder="<%= typeof editA != 'undefined' ? editA  : '' %>" value="<%= typeof editA != 'undefined' ? editA  : '' %>"></textarea>      
+    </div>
+    <div class="form-group">      
+      <h3 class="acolor">Deck:</h3>      
+      <input      
+        type="text" 
+        id="deck" 
+        name="deck" 
+        placeholder="<%= typeof editD != 'undefined' ? editD  : '' %>"
+        value="<%= typeof editD != 'undefined' ? editD  : '' %>"      
+      />      
+    </div>      
+          
+    <br>    
+    <button type="submit" class="btn btn-primary btn-block">      
+      Save Question & Answer      
+    </button>      
+  </form>

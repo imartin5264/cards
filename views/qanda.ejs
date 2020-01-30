@@ -1,0 +1,49 @@
+<header>
+        <a href="<%= `http://localhost:5000/gui/edit/${currentId}` %>"><h1>Edit</h1></a>
+        <a href="http://localhost:5000/card"><h1>Home</h1></a>
+        <a href="http://localhost:5000/card/deck/"><h1>Deck</h1></a>
+</header>
+
+<div class="card-container">
+    <div class="card">
+        <div class="front">
+            <div id="infohold">
+                <div id="infoplacement1">
+                    <h4 id="count">
+                        Q: <%= count %>
+                    </h4>
+                </div>
+                <div id="infoplacement2">
+                    <h4 id="wrg_count">
+                        Attempts: <%= tries %>
+                    </h4>
+                </div>
+            </div>
+            
+            <div>
+                <h1 id="spaces">
+                    Question: <%= question %>
+                </h1>
+                <% include ./partials/message %> 
+                <input id="usanswer" 
+                    type="text" 
+                    name="useranswer" 
+                    placeholder="Enter Your Answer"
+                    value=""
+                />
+            </div>
+                    
+            
+                
+            <a id="qlink"><button id="submit">submit</button></a>
+        </div>
+        <div class="back">
+            <h1 id="dbanswer"><%=answer%></h1>
+            <h4 id="count">
+                Question: <%= count %>
+            </h4>
+            <% include ./partials/message %>
+            <a id="alink"><button id="newq">Next</button></a>
+        </div>
+    </div>
+</div>

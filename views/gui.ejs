@@ -1,0 +1,50 @@
+<div id="changecontainer">
+  <header>
+    <a href="http://localhost:5000/card"><h1>Home</h1></a>
+    <h1 id="title">Editing Options</h1>
+  </header>
+  <br>
+  <hr>
+  <div id="addinfo">
+    <h2 class="topdes">Add Question and Answer</h2>
+    <form action="/gui" method="POST" id="form-size">      
+      <div class="form-group">      
+        <h3 class="qcolor">Question:</h3>      
+        <textarea id="textbox" type="name" name="question" placeholder="Enter Question"></textarea>      
+      </div>
+      <br>      
+      <div class="form-group">      
+        <h3 class="acolor">Answer:</h3>      
+        <textarea id="boxsize" type="text" name="answer" placeholder="Answer"value="<%= typeof useranswer != 'undefined' ? useranswer  : '' %>"></textarea>      
+      </div>
+      <div class="form-group">      
+        <h3 class="acolor">Deck:</h3>      
+        <input      
+          type="text" id="deck" name="deck" placeholder="Enter Name of Deck"      
+        />      
+      </div>      
+            
+      <br>    
+      <button type="submit" class="btn btn-primary btn-block">      
+        Save Question & Answer      
+      </button>      
+    </form>
+  </div>
+  <br>
+  <hr>
+  <div id="typeofedit">
+    <h2 class="topdes">Change existing question</h2>
+    <a href="http://localhost:5000/gui/edit"><button>Edit</button></a>
+    <a href="http://localhost:5000/gui/delete"><button>Delete</button></a>
+  </div>    
+  <br>
+  <hr>
+  <h2 class="topdes">List of Current Questions and Answers</h2>
+  <div id="allinfo">
+    <% include ./partials/message %>
+  </div>
+
+</div>
+ 
+
+

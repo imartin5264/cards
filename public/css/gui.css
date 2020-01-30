@@ -1,0 +1,88 @@
+#changecontainer{
+    text-align: center;
+    height: 3000px;
+    background-color: rgb(55, 9, 77);
+}
+
+
+#title{
+    color: white;
+    height: 2%;
+}
+
+#addinfo{
+    height: 24%;
+    background-color: blueviolet;
+}
+
+.topdes{
+    color: white;
+    height: 5%;
+}
+
+#form-size{
+    height: 100%;
+}
+
+.form-group{
+    height: 26%;
+    background-color: rgb(2, 83, 88);
+    width: 100%;
+}
+
+#textbox{
+    height: 70%;
+    background-color: turquoise;
+    width: 70%;
+}
+
+#boxsize{
+    height: 70%;
+    background-color: turquoise;
+    width: 70%;
+}
+
+#deck{
+    height: 40%;
+    background-color: turquoise;
+    width: 50%;
+}
+
+.qcolor{
+    color: rgb(233, 136, 88);
+    white-space: pre-line;
+}
+
+.acolor{
+    color: rgb(211, 233, 88);
+    white-space: pre-line;
+}
+
+.cardstyle{
+    border: 1px dashed red;
+    margin: 0;
+    padding: 0;
+}
+
+#allinfo{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.cardstyle{
+    width: 20%;
+    height: 15%;
+}
+
+#allinfoedit{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.cardstyleedit{
+    width: 20%;
+    height: 15%;
+}
+

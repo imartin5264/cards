@@ -1,0 +1,16 @@
+#optcontainer{
+    height: 1000px;
+    
+}
+
+#optleft{
+    background-color: red;
+    height: 100%;
+    width: 50%;
+  }
+  
+  #optright{
+    background-color: blue;
+    height: 100%;
+    width: 50%;
+  }
