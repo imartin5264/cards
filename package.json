@@ -26,6 +26,10 @@
   "engines": {
     "node": "10.16.3"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/imartin5264/cards"
+  },
   "author": "Isiah Martin",
   "license": "ISC"
 }
