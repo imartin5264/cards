@@ -23,6 +23,9 @@
     "start": "node index",
     "dev": "nodemon index"
   },
+  "engines": {
+    "node": "10.16.3"
+  },
   "author": "Isiah Martin",
   "license": "ISC"
 }
