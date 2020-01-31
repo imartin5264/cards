@@ -16,7 +16,7 @@ const db = require('./config/dbconnect').MongoURI;
 
 
 // Connect to Mongo
-mongoose.connect(process.env.MONGODB_URL || db, {
+mongoose.connect(process.env.MONGODB_URI || db, {
      useNewUrlParser: true,
      useUnifiedTopology: true 
     })
@@ -62,4 +62,5 @@ app.use('/', require('./routes/guiroutes'));
 app.use('/users', require('./routes/users'));
 
 const PORT = process.env.PORT || 5000;
+
 app.listen(PORT, console.log(`Server started on ${PORT}`));
