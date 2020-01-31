@@ -1,3 +1,4 @@
 /config/dbconnect.js
 package-lock.json
 /node_modules
+.env

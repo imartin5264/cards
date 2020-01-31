@@ -5,6 +5,7 @@ const passport = require('passport');
 const session = require('express-session');
 const flash = require('connect-flash');
 const methodOverride = require('method-override');
+require('dotenv').config();
 
 const app = express();
 
