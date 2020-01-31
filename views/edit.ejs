@@ -1,10 +1,10 @@
-<a href="http://localhost:5000/card"><h1>Home</h1></a>
+<a href="https://social-flashcards.herokuapp.com/card"><h1>Home</h1></a>
 <h1>Select The Question You Wish To Edit</h1>
 <div id="allinfoedit">
     <% if(typeof choiceedit != 'undefined'){%>
         <% choiceedit.forEach(function(info){%>
             <div class="cardholder" class="cardstyleedit">
-                <a href="<%=`http://localhost:5000/gui/edit/${info.id}` %>" class="cardeditredirect">
+                <a href="<%=`https://social-flashcards.herokuapp.com/gui/edit/${info.id}` %>" class="cardeditredirect">
                     <button class="selection">
                         <div>                
                             Card ID: <%= info.id %>                
