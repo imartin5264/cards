@@ -2,5 +2,26 @@
 
 <h1>Select The Question You Wish To Delete</h1>
 <div id="allinfoedit">
-    <% include ./partials/message %>
+    <% if(typeof allinfo != 'undefined'){%>
+        <% allinfo.forEach(function(info){%>
+            <div class="cardholder" class="cardstyleedit">
+                <a href="<%=`http://localhost:5000/gui/delete/${info.id}` %>" class="cardeditredirect">
+                    <button class="selection">
+                        <div>                
+                            Card ID: <%= info.id %>                
+                        </div>
+                        <div class="qcolor">
+                            Question: <%= info.question %>
+                        </div>
+                        <div class="acolor">                
+                            Answer: <%= info.answer %>                
+                        </div>
+                    </button>
+                </a>
+                
+            </div>
+            <br>
+            
+        <%});%>
+    <%}%>
 </div>

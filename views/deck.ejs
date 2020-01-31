@@ -1,1 +1,14 @@
-<% include ./partials/message %>
+<% if(typeof deckname != 'undefined'){%>
+    <% deckname.forEach(function(deck){%>
+        <div>
+            <a href="<%= `http://localhost:5000/card/${deck}/false/0/0/noError` %>">
+                <button>
+                    <%= deck %>
+                </button>
+            </a>
+            
+            <br>
+        </div>
+        
+    <%});%>
+<%}%>

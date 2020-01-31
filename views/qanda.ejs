@@ -24,7 +24,11 @@
                 <h1 id="spaces">
                     Question: <%= question %>
                 </h1>
-                <% include ./partials/message %> 
+                <% if(typeof error != 'undefined' && error != 'noError'){%>
+                    <div>
+                        <%= error %>
+                    </div>
+                <%}%> 
                 <input id="usanswer" 
                     type="text" 
                     name="useranswer" 
@@ -42,7 +46,11 @@
             <h4 id="count">
                 Question: <%= count %>
             </h4>
-            <% include ./partials/message %>
+            <% if(typeof error != 'undefined' && error != 'noError'){%>
+                <div>
+                    <%= error %>
+                </div>
+            <%}%>
             <a id="alink"><button id="newq">Next</button></a>
         </div>
     </div>

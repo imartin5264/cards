@@ -41,7 +41,20 @@
   <hr>
   <h2 class="topdes">List of Current Questions and Answers</h2>
   <div id="allinfo">
-    <% include ./partials/message %>
+    <% if(typeof alldata != 'undefined'){%>
+      <% alldata.forEach(function(info){%>
+        <div class="cardstyle">
+            <div class="qcolor">
+                Question: <%= info.question %>
+            </div>
+            <div class="acolor">
+                Answer: <%= info.answer %>
+            </div>
+            <br>
+        </div>
+          
+      <%});%>
+    <%}%>
   </div>
 
 </div>
