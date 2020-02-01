@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const User = require('../models/Card');
 const url = require('url');
-const myUrl = new URL('http://localhost:5000/card/:bolen/:id/:a');
+const myUrl = new URL('https://social-flashcards.herokuapp.com/card/:bolen/:id/:a');
 const passport = require('passport');
 const { ensureAuthenticated } = require('../config/blockaccess.js');
 
@@ -56,7 +56,7 @@ router.get('/card/:deck/:bol/:id/:wrongcount/:error', ensureAuthenticated, async
             
     }catch{
         if (card == null){
-            res.redirect(`http://localhost:5000/card/${deck}`);
+            res.redirect(`/card/${deck}`);
             console.log('Questions not found');
         }else{
             console.log('issue with gathering data');
@@ -110,7 +110,7 @@ router.get('/card/deck', async (req, res) => {
         console.log("Info gathered");
     }catch{
         if (card == null){
-            res.redirect('http://localhost:5000/gui');
+            res.redirect('/gui');
             console.log('Questions not found');
         }else{
             console.log('issue with gathering data');
@@ -140,7 +140,7 @@ router.get('/gui', ensureAuthenticated, async (req, res) => {
         console.log("Info gathered");
     }catch{
         if (card == null){
-            res.redirect('http://localhost:5000/gui');
+            res.redirect('/gui');
             console.log('Questions not found');
         }else{
             console.log('issue with gathering data');
@@ -172,7 +172,7 @@ router.post('/gui', ensureAuthenticated, async (req, res) => {
             console.log("Info gathered");
         }catch{
             if (card == null){
-                res.redirect('http://localhost:5000/gui');
+                res.redirect('/gui');
                 console.log('Questions not found');
             }else{
                 console.log('issue with gathering data');
@@ -197,7 +197,7 @@ router.get('/gui/edit', ensureAuthenticated, async (req, res) => {
         });
     }catch{
         if (cards == null){
-            res.redirect('http://localhost:5000/gui');
+            res.redirect('/gui');
             console.log('Question not found to change isiah');
         }else{
             console.log('another issue with gathering data');
@@ -239,7 +239,7 @@ router.get('/gui/edit/:cardid', ensureAuthenticated, async (req, res) => {
     }catch{
         if (card == null){
             console.log(titty);
-            res.redirect('http://localhost:5000/gui');
+            res.redirect('/gui');
             console.log('Question not found to change 1');
         }else{
             console.log('another issue with gathering data');
@@ -259,7 +259,7 @@ router.get('/gui/delete', ensureAuthenticated, async (req, res) => {
         });
     }catch{
         if (cards == null){
-            res.redirect('http://localhost:5000/gui');
+            res.redirect('/gui');
             console.log('Question not found to select to delete isiah');
         }else{
             console.log('another issue with gathering data');
@@ -291,7 +291,7 @@ router.put('/gui/edit/:cardid', ensureAuthenticated, async (req, res) => {
                 console.log(selectedEdit.deck);
                 await card.save();
                 console.log(card);
-                res.redirect('http://localhost:5000/gui');
+                res.redirect('/gui');
                 console.log("Info changed");
             }else{
                 console.log('Subcollection Requested ID Not Found');
@@ -299,7 +299,7 @@ router.put('/gui/edit/:cardid', ensureAuthenticated, async (req, res) => {
         }
     }catch{
         if (card == null){
-            res.redirect('http://localhost:5000/gui');
+            res.redirect('/gui');
             console.log('Question not found to change 2');
         }else{
             console.log('another issue with updating');
@@ -339,7 +339,7 @@ router.get('/gui/delete/:deleteid', ensureAuthenticated, async (req, res) => {
     }catch{
         if (card == null){
             console.log(titty);
-            res.redirect('http://localhost:5000/gui');
+            res.redirect('/gui');
             console.log('Question not found to change 1');
         }else{
             console.log('another issue with gathering data');
@@ -362,14 +362,14 @@ router.delete('/gui/delete/:deleteid', ensureAuthenticated, async (req, res) => 
                 console.log(i);
                 subcollection.splice(i, 1);
                 await card.save();
-                res.redirect('http://localhost:5000/gui');
+                res.redirect('/gui');
             }else{
                 console.log('Subcollection Requested ID Not Found');
             }
         }
     }catch{
         if (card == null){
-            res.redirect('http://localhost:5000/gui');
+            res.redirect('/gui');
             console.log('Question not found to delete');
         }else{
             console.log('another issue with updating');
