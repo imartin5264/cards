@@ -33,14 +33,14 @@ if(bol != 'true'){
         console.log(usanswer);
         console.log(usanwerValue);
         if(inc_count > 2){
-            window.location(`http://localhost:5000/card/${deck}/true/${i}/${inc_count}/toManyTries`);
+            window.location(`https://social-flashcards.herokuapp.com/card/${deck}/true/${i}/${inc_count}/toManyTries`);
         }else if(usanwerValue != innerHtmlDbA){
             inc_count ++;
             console.log('incoreect answer compair', usanwerValue, innerHtmlDbA);
-            window.location(`http://localhost:5000/card/${deck}/false/${i}/${inc_count}/inorrect`);
+            window.location(`https://social-flashcards.herokuapp.com/card/${deck}/false/${i}/${inc_count}/inorrect`);
         }else{
             console.log(usanswer, innerHtmlDbA);
-            window.location(`http://localhost:5000/card/${deck}/true/${i}/${inc_count}/correct`);
+            window.location(`https://social-flashcards.herokuapp.com/card/${deck}/true/${i}/${inc_count}/correct`);
         }
     });
     
